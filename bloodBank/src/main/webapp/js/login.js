@@ -28,7 +28,7 @@ $(document).ready(function() {
         	   $("#divCheckPasswordMatch").html("Passwords match.").show().fadeOut(3000);
            }
         	   //added user detail
-           //http://localhost:8080/bloodBank/blood?operation=reg&Name=sathish&password=1000
+          
 		var url ="/bloodBank/blood?operation=reg&Name=" +name+ "&password="+pass; 
 			$.ajax({
 			url : url,
@@ -52,7 +52,7 @@ $(document).ready(function() {
 
 	})
 	 /*keyup and keydown*/
-	 $(document).on("keyup","#name",function(key){
+	 $(document).on("keyup","#Name",function(key){
 	        var td = $(this).parent();
 	        var tr = td.parent();
 	        if (key.which == 13) {
@@ -66,7 +66,7 @@ $(document).ready(function() {
 	            tr.next().children().children("#cpassword").focus();
 	        }
 	        if(key.which == 38){
-	            tr.prev().children().children("#name").focus();
+	            tr.prev().children().children("#Name").focus();
 	        }
 	    })
 	    $(document).on("keyup","#cpassword",function(key){
