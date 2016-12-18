@@ -9,8 +9,6 @@ import java.sql.Statement;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
-
 public class Blood {
 
 	Connection con = null;
@@ -156,23 +154,23 @@ public class Blood {
 		return ss;
 
 	}
+
 	public JSONObject getone(String unames) {
 		JSONObject res1 = new JSONObject();
 		try {
 			Statement stat = con.createStatement();
-			String query = "select email from orders where uname=" +unames;
+			String query = "select email from orders where uname=" + unames;
 			ResultSet rset = stat.executeQuery(query);
 			if (rset.next()) {
-				
+
 				res1.put("email", rset.getString(8));
-				
+
 			}
 		} catch (Exception e) {
 
 		}
 		return res1;
 	}
-
 
 	private void openConnection() throws ClassNotFoundException, Exception {
 		Class.forName(BloodConstant.MYSQL_DRIVER);

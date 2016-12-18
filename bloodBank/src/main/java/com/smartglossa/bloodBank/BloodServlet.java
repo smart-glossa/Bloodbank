@@ -9,9 +9,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-
-
-
 public class BloodServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -45,7 +42,7 @@ public class BloodServlet extends HttpServlet {
 			String uname = request.getParameter("uName");
 			String lname = request.getParameter("lname");
 			String bgroup = request.getParameter("bgroup");
-			int mno = Integer.parseInt( request.getParameter("mno"));
+			int mno = Integer.parseInt(request.getParameter("mno"));
 			String email = request.getParameter("email");
 			JSONObject obj1 = new JSONObject();
 			try {
@@ -64,13 +61,13 @@ public class BloodServlet extends HttpServlet {
 			String pass = request.getParameter("pass");
 			JSONObject obj = new JSONObject();
 			try {
-				Blood bog=new Blood();
-				if(uname!=""){
+				Blood bog = new Blood();
+				if (uname != "") {
 					obj = bog.login(uname, pass);
-					}else{
-						obj.put("status",0);
-					}
-         	//result.put("message", result);
+				} else {
+					obj.put("status", 0);
+				}
+				// result.put("message", result);
 			} catch (Exception e) {
 				obj.put("status", 0);
 				obj.put("message", e.getMessage());
@@ -79,9 +76,9 @@ public class BloodServlet extends HttpServlet {
 				// TODO: handle exception
 			}
 			response.getWriter().print(obj);
-		
-		}else if (op.equals("getgroup")) {
-			String bgroup =request.getParameter("bgroup");
+
+		} else if (op.equals("getgroup")) {
+			String bgroup = request.getParameter("bgroup");
 			JSONObject retun = new JSONObject();
 			try {
 				Blood geton = new Blood();
@@ -91,32 +88,32 @@ public class BloodServlet extends HttpServlet {
 				retun.put("status", 0);
 			}
 			response.getWriter().println(retun);
-		}else if (op.equals("getAll")) {
-			JSONArray user=new JSONArray();
+		} else if (op.equals("getAll")) {
+			JSONArray user = new JSONArray();
 			try {
 				Blood userAll = new Blood();
 				user = userAll.userAll();
-				
+
 			} catch (Exception e) {
-				JSONObject obj=new JSONObject();
+				JSONObject obj = new JSONObject();
 				obj.put("status", 0);
 				e.printStackTrace();
-				
+
 			}
 			response.getWriter().print(user);
 		} else if (op.equals("getonly")) {
-			String bgroup= request.getParameter("bgroups");
-			JSONArray gets=new JSONArray();
+			String bgroup = request.getParameter("bgroups");
+			JSONArray gets = new JSONArray();
 			try {
 				Blood one = new Blood();
-				gets=one.getOne(bgroup);
+				gets = one.getOne(bgroup);
 			} catch (Exception e) {
 
 				e.printStackTrace();
 			}
 			response.getWriter().println(gets);
-		}else if(op.equals("emails")){
-			String unames=request.getParameter("names");
+		} else if (op.equals("emails")) {
+			String unames = request.getParameter("names");
 			{
 				JSONObject res1 = new JSONObject();
 				try {
@@ -128,18 +125,18 @@ public class BloodServlet extends HttpServlet {
 				}
 				response.getWriter().print(res1);
 			}
-			}else if(op.equals("send")){
-				String to = request.getParameter("to");
-		        String message =  request.getParameter("message");
-		        JSONObject sent=new JSONObject();
-		        try {
-					Email snd=new Email();
-					snd.send(to, message);
-				} catch (Exception e) {
-					// TODO: handle exception
-				}
-		        
-		       System.out.println("Mail send successfully");
-		    }   
+		} else if (op.equals("send")) {
+			String to = request.getParameter("to");
+			String message = request.getParameter("message");
+			JSONObject sent = new JSONObject();
+			try {
+				Email snd = new Email();
+				snd.send(to, message);
+			} catch (Exception e) {
+				// TODO: handle exception
+			}
+
+			System.out.println("Mail send successfully");
 		}
 	}
+}
