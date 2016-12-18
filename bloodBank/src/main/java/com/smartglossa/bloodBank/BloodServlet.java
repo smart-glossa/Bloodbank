@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+
 public class BloodServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -77,13 +78,23 @@ public class BloodServlet extends HttpServlet {
 			}
 			response.getWriter().print(obj);
 		
-		} else if (op.equals("getAll")) {
+		}else if (op.equals("getgroup")) {
+			String bgroup =request.getParameter("bgroup");
+			JSONObject retun = new JSONObject();
+			try {
+				Blood geton = new Blood();
+				JSONArray retuns = geton.retunsons(bgroup);
+				retun.put("status", 1);
+			} catch (Exception e) {
+				retun.put("status", 0);
+			}
+			response.getWriter().println(retun);
+		}else if (op.equals("getAll")) {
 			JSONObject obj = new JSONObject();
 			try {
 				Blood userAll = new Blood();
 				JSONArray user = userAll.userAll();
-				obj.put("status", 1);
-				obj.put("message", user);
+				
 			} catch (Exception e) {
 				obj.put("status", 0);
 				e.printStackTrace();

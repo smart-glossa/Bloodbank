@@ -75,16 +75,15 @@ public class Blood {
 	public JSONArray userAll() throws Exception {
 		try {
 			JSONArray gets = new JSONArray();
-			String query = "Select * from User";
+			String query = "Select * from orders";
 			rs = stat.executeQuery(query);
 			while (rs.next()) {
 				JSONObject get = new JSONObject();
-				get.put("userName", rs.getString(1));
-				get.put("fName", rs.getString(3));
-				get.put("lName", rs.getString(4));
-				get.put("bgroup", rs.getString(5));
-				get.put("pno", rs.getString(6));
-				get.put("email", rs.getString(7));
+				get.put("Name", rs.getString(2));
+				get.put("lName", rs.getString(3));
+				get.put("bgroup", rs.getString(4));
+				get.put("mno", rs.getString(5));
+				get.put("email", rs.getString(6));
 				gets.put(get);
 			}
 			return gets;
@@ -128,6 +127,28 @@ public class Blood {
 		} finally {
 			closeConnection();
 		}
+
+	}
+	public JSONArray retunsons(String bgroup) {
+		JSONArray ss=new JSONArray();
+		try {
+			
+			Statement stat = con.createStatement();
+			String query = "select * from orders where bgroup="+bgroup+"" ;
+			ResultSet rs = stat.executeQuery(query);
+			while (rs.next()) {
+				JSONObject one = new JSONObject();
+				one.put("Name", rs.getInt(1));
+				one.put("bgroup", rs.getDate(2));
+				one.put("mno", rs.getInt(3));
+				one.put("email", rs.getDate(4));
+				ss.put(one);
+
+			}
+		} catch (Exception e) {
+
+		}
+		return ss;
 
 	}
 

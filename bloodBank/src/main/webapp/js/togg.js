@@ -1,0 +1,20 @@
+$(document).ready(function(){
+    $("label").click(function(){
+        $(".blod").toggle();
+    });
+});
+$(document).ready(function(){
+    $("#ads").click(function(){
+        $("p").toggle();
+    });
+});
+$(document).ready(function(){
+    $("#boo").click(function(){
+        $(".books").toggle();
+    });
+});
+$(document).ready(function(){
+    $(".allbook").click(function(){
+        $(".getAllbook").toggle();
+    });
+});

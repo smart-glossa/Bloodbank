@@ -14,14 +14,14 @@ function blood(){
 	bloodVar += "	&nbsp;";
 	bloodVar += "	<input type=text id=\"lname\" placeholder=\"LastName..\">";
 	bloodVar += "	<\/div>";
-	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;";
+	bloodVar += "	&nbsp;&nbsp;";
 	bloodVar += "	<div>";
 	bloodVar += "	<label>BloodGroup*:<\/label>";
 	
 	bloodVar += "	<input type=text id=\"bgroup\" placeholder=\"Your BloodGroup..!\">";
 	bloodVar += "	&nbsp;";
 	bloodVar += "	<label>MobileNumber*:<\/label>";
-	bloodVar += "	&nbsp;&nbsp;";
+	bloodVar += "	&nbsp;";
 	bloodVar += " <input type=text id=\"mno\" placeholder=\"MObileNumber..\">";
 	bloodVar += " <\/div>";
 	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
@@ -36,7 +36,7 @@ function blood(){
 	bloodVar += "	&nbsp;&nbsp;&nbsp;";
 	bloodVar += "	<div>";
 	bloodVar += "	&nbsp;&nbsp;&nbsp;";
-	bloodVar += "	<button id=\"submit\" >Submit</button>";
+	bloodVar += "	<button id=\"bsubmit\" >Submit</button>";
 	bloodVar += "	&nbsp;";
 	bloodVar += "	<button id=\"update\">GetAll</button>";
 	bloodVar += "	<\/div>";
