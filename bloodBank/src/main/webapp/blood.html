@@ -1,54 +1,74 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<script type="text/javascript" src="js/external/jquery.js"></script>
-<script type="text/javascript" src="js/togg.js"></script>
-<script type="text/javascript" src="js/blood.js"></script>
-<script type="text/javascript" src="js/order.js"></script>
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/styles.css">
-<script type="text/javascript" src="js/valid.js"></script>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+	<title>Insert title here</title>
+	<script type="text/javascript" src="js/external/jquery.js"></script>
+	<script type="text/javascript" src="js/togg.js"></script>
+	<script type="text/javascript" src="js/blood.js"></script>
+	<script type="text/javascript" src="js/order.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<script type="text/javascript" src="js/valid.js"></script>
 </head>
+
 <body>
-<div class="ss">BloodBank</div>
-<div class="hh">
+	<div class="ss">BloodBank</div>
+	<div class="hh">
 		<a href="#1" onclick="return show();"><img alt="" src="img/1.png" title="Setting"></a>
-	</div> 
-	
+	</div>
+
 	<div class="lls">
 		<div id="benefits" style="display: none;">
 			<center>
 				<h1 class="fons">Settings</h1>
-	<div class=home>
-   <table class="tabs">
- <tr><td> <div id=show class=active onclick="blood()"><label> Add Details</label> </div></td>
-  <td><div id="stud" onclick="getAllorder()"><div id="ads">BloodDonater</div></div></td>
-  <td><div id=book onclick="bloods()"><div id="searchs" >Search Blood Group</div></div></td>
-  <td><div id=sta onclick="Email()"><div class="allbb">Email/SMS</div></div></td>
- </tr></table>
- 
-  
-</div>
+				<div class=home>
+					<table class="tabs">
+						<tr>
+							<td>
+								<div id=show class=active onclick="blood()"><label> Add Details</label> </div>
+							</td>
+							<td>
+								<div id="stud" onclick="getAllorder()">
+									<div id="ads">BloodDonater</div>
+								</div>
+							</td>
+							<td>
+								<div id=book onclick="bloods()">
+									<div id="searchs">Search Blood Group</div>
+								</div>
+							</td>
+							<td>
+								<div id=sta onclick="Email()">
+									<div class="allbb">Email/SMS</div>
+								</div>
+							</td>
+						</tr>
+					</table>
+
+
+				</div>
 			</center>
 			<div class="hs">
-				<a onclick="return hide();"><img alt="" src="img/close.png"
-					width="30" height="30"></a>
+				<a onclick="return hide();"><img alt="" src="img/close.png" width="30" height="30"></a>
 			</div>
-			
+
 		</div>
 	</div>
 	<div id="msg"></div>
 	<div class="dom">
-	
-				<p class="getorders"></p></div>
-				<div>
-				<div class="blod"></div>
-				<div>
-				<div class="dts"></div></div>
-	            </div>
-			    <div class="getStat"></div>
-		       <div class="email"> </div>
-	</body>
-	</html>
+
+		<p class="getorders"></p>
+	</div>
+	<div>
+		<div class="blod"></div>
+		<div>
+			<div class="dts"></div>
+		</div>
+	</div>
+	<div class="getStat"></div>
+	<div class="email"> </div>
+</body>
+
+</html>

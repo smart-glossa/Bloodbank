@@ -1,109 +1,119 @@
 @CHARSET "ISO-8859-1";
 title {
     display: none;
-    color:red;
+    color: red;
 }
+
 body {
- /* color: #fff;
+    /* color: #fff;
   font: 600 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
-*/}
+*/
+}
+
 .box {
-  background: #F2F4F4 ;
-  border-radius: 6px;
-  cursor: pointer;
-  height: 45px;
-  line-height: 45px;
-  text-align: center;
-  transition-property: background, border-radius;
-  transition-duration: 1s;
-  transition-timing-function: linear;
-  width: 95px;
+    background: #F2F4F4;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    transition-property: background, border-radius;
+    transition-duration: 1s;
+    transition-timing-function: linear;
+    width: 95px;
 }
 
 .box:hover {
-  background: #ff7b29;
-  border-radius: 80%;
-}
-.ss{
-/*background-color:#ffffff;*/
-width:1350px;
-height:100px;
-font-family:cursive;
-font-size:45px;
-left:600px;
-color:#3333ff;
-top:15px;
-position:absolute;          
+    background: #ff7b29;
+    border-radius: 80%;
 }
 
-.emp{
-background-color:#bfbfbf;
-width:900px;
-position:absolute;
-left:230px;
-height:450px;
-top:170px;   
+.ss {
+    /*background-color:#ffffff;*/
+    width: 1350px;
+    height: 100px;
+    font-family: cursive;
+    font-size: 45px;
+    left: 600px;
+    color: #3333ff;
+    top: 15px;
+    position: absolute;
 }
-.nav{
-background-color:#bfbfbf;
-width:120px;
-height:70px;
-top:200px;
-left:20px;
-font-family:cursive;
-font-size:20px;
-position:absolute;
-color:#3333ff; 
-	
+
+.emp {
+    background-color: #bfbfbf;
+    width: 900px;
+    position: absolute;
+    left: 230px;
+    height: 450px;
+    top: 170px;
 }
+
+.nav {
+    background-color: #bfbfbf;
+    width: 120px;
+    height: 70px;
+    top: 200px;
+    left: 20px;
+    font-family: cursive;
+    font-size: 20px;
+    position: absolute;
+    color: #3333ff;
+}
+
 h3 {
-	color:#3333ff;
-	font-size: 30px;
+    color: #3333ff;
+    font-size: 30px;
 }
 
-input,select {
-	width: 190px;
-	height: 40px;
-	font-size:16px;
-	font-family:times new romans;  
+input, select {
+    width: 190px;
+    height: 40px;
+    font-size: 16px;
+    font-family: times new romans;
 }
-textarea{
-	font-size:16px;
-	font-family:times new romans; 
+
+textarea {
+    font-size: 16px;
+    font-family: times new romans;
 }
 
 .tab {
-	font-size: 25px;
+    font-size: 25px;
 }
 
-#sub{
-	width:90px;
-	height:40px; 
+#sub {
+    width: 90px;
+    height: 40px;
 }
+
 #submit {
-	width: 90px;
-	height: 40px;
-	font-size: 20px;
-	font-family: Times new roman;
-	margin-left:40px; 
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+    font-family: Times new roman;
+    margin-left: 40px;
 }
 
 #update {
-	width: 90px;
-	height: 40px;
-	font-size: 20px;
-	font-family: Times new roman;
-	margin-left:40px; 
+    width: 90px;
+    height: 40px;
+    font-size: 20px;
+    font-family: Times new roman;
+    margin-left: 40px;
 }
-table{
-border-spacing:20px;
-padding-right:30px;   
+
+table {
+    border-spacing: 20px;
+    padding-right: 30px;
 }
+
 textarea {
-	width:190px;
-	height:50px;  
+    width: 190px;
+    height: 50px;
 }
-span{
-color:red;
-width:18px;  
+
+span {
+    color: red;
+    width: 18px;
 }
