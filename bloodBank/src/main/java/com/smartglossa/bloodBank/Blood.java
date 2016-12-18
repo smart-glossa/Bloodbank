@@ -94,17 +94,18 @@ public class Blood {
 
 	}
 
-	public JSONObject getOne(String bgroup) throws Exception {
+	public JSONArray getOne(String bgroup) throws Exception {
 		try {
-			JSONObject gets = new JSONObject();
+			JSONArray gets = new JSONArray();
 			String query = "select * from user where bgroup='" + bgroup + "'";
 			rs = stat.executeQuery(query);
-			if (rs.next()) {
-				gets.put("userName", rs.getString(1));
-				gets.put("fName", rs.getString(3));
-				gets.put("lName", rs.getString(4));
-				gets.put("pno", rs.getString(5));
-				gets.put("email", rs.getString(6));
+			while (rs.next()) {
+				JSONObject oder=new JSONObject();
+				oder.put("userName", rs.getString(1));
+				oder.put("fName", rs.getString(3));
+				oder.put("lName", rs.getString(4));
+				oder.put("pno", rs.getString(5));
+				oder.put("email", rs.getString(6));
 			}
 			return gets;
 		} finally {

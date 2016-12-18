@@ -90,28 +90,29 @@ public class BloodServlet extends HttpServlet {
 			}
 			response.getWriter().println(retun);
 		}else if (op.equals("getAll")) {
-			JSONObject obj = new JSONObject();
+			JSONArray user=new JSONArray();
 			try {
 				Blood userAll = new Blood();
-				JSONArray user = userAll.userAll();
+				user = userAll.userAll();
 				
 			} catch (Exception e) {
+				JSONObject obj=new JSONObject();
 				obj.put("status", 0);
 				e.printStackTrace();
 				// TODO: handle exception
 			}
-			response.getWriter().print(obj);
+			response.getWriter().print(user);
 		} else if (op.equals("getonly")) {
-			String uname = request.getParameter("uName");
-			JSONObject obj2 = new JSONObject();
+			String bgroup= request.getParameter("bgroups");
+			JSONArray gets=new JSONArray();
 			try {
 				Blood one = new Blood();
-				one.getOne(uname);
-				obj2.put("status", 1);
+				gets=one.getOne(bgroup);
 			} catch (Exception e) {
 
 				e.printStackTrace();
 			}
+			response.getWriter().println(gets);
 		}
 	}
 

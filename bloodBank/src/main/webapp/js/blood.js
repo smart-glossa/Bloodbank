@@ -1,3 +1,23 @@
+function bloods(){
+	var bloodVar="";
+	bloodVar += "		<center>";
+	bloodVar += "<div class=\"blo\">";
+	bloodVar += "";
+	bloodVar += "	<div>";
+	bloodVar += "	<h2>Search BloodGroup<\/h2>";
+	bloodVar += "	<\/div>";
+	bloodVar += "	<div>";
+	bloodVar += "	<label>BloodGroup*:<\/label>";
+	bloodVar += "	<input type=text id=\"uName\" placeholder=\"Name..\">";
+	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	bloodVar += "	<button id=\"bsubmit\" >Submit</button>";
+	bloodVar += "	<\/div>";
+	bloodVar += "";
+	bloodVar += "	<\/div>";
+	bloodVar += "	</center>";
+$('.dts')[0].innerHTML = bloodVar;
+}
+
 function blood(){
 	var bloodVar="";
 	bloodVar += "		<center>";
@@ -45,3 +65,4 @@ function blood(){
 	bloodVar += "	</center>";
 $('.blod')[0].innerHTML = bloodVar;
 }
+
