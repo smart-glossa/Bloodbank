@@ -15,6 +15,6 @@ $(document).ready(function(){
 });
 $(document).ready(function(){
     $(".allbb").click(function(){
-        $(".getSt").toggle();
+        $(".email").toggle();
     });
 });

@@ -1,3 +1,30 @@
+function Email(){
+	var bloodVar="";
+	bloodVar += "		<center>";
+	bloodVar += "<div class=\"blo\">";
+	bloodVar += "";
+	bloodVar += "	<div>";
+	bloodVar += "	<h2>Email<\/h2>";
+	bloodVar += "	<\/div>";
+	bloodVar += "	<div>";
+	bloodVar += "	<label>From*:<\/label>";
+	bloodVar += "	<input type=text id=\"bgroups\" placeholder=\"From Email..\">";
+	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	bloodVar += "	<label>To*:<\/label>";
+	bloodVar += "	<input type=text id=\"bgroups\" placeholder=\"To Email..\">";
+	bloodVar += "	<\/div>";
+	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;";
+	bloodVar += "	<div>";
+	bloodVar += "	<label>Message*:<\/label>";
+	bloodVar += "	<textarea id=\"dets\"><\/textarea>";
+	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+	bloodVar += "	<button id=\"esubmit\" >Submit</button>";
+	bloodVar += "	<\/div>";
+	bloodVar += "";
+	bloodVar += "	<\/div>";
+	bloodVar += "	</center>";
+$('.email')[0].innerHTML = bloodVar;
+}
 function bloods(){
 	var bloodVar="";
 	bloodVar += "		<center>";
