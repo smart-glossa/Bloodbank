@@ -8,9 +8,9 @@ function bloods(){
 	bloodVar += "	<\/div>";
 	bloodVar += "	<div>";
 	bloodVar += "	<label>BloodGroup*:<\/label>";
-	bloodVar += "	<input type=text id=\"uName\" placeholder=\"Name..\">";
+	bloodVar += "	<input type=text id=\"bgroups\" placeholder=\"Name..\">";
 	bloodVar += "	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
-	bloodVar += "	<button id=\"bsubmit\" >Submit</button>";
+	bloodVar += "	<button id=\"bsubmits\" >Submit</button>";
 	bloodVar += "	<\/div>";
 	bloodVar += "";
 	bloodVar += "	<\/div>";

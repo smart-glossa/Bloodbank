@@ -9,12 +9,12 @@ $(document).ready(function(){
     });
 });
 $(document).ready(function(){
-    $("#boo").click(function(){
-        $(".blods").toggle();
+    $("#searchs").click(function(){
+        $(".getStat").toggle();
     });
 });
 $(document).ready(function(){
-    $(".allbook").click(function(){
-        $(".getAllbook").toggle();
+    $(".allbb").click(function(){
+        $(".getSt").toggle();
     });
 });

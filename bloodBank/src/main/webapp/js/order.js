@@ -167,3 +167,32 @@ function getAllorder(){
 						 })
 						  
 					}
+$(document).on('click','#bsubmits',function(){
+	var bgro = $('#bgroups').val();
+	
+		var url = "/bloodBank/blood?operation=getonly&bgroups="+ bgro;
+		$.ajax({
+			url:url,
+			type:'POST'
+		})
+		.done(function(result){
+			var array = JSON.parse(result);
+	    	  var table = '<table>'
+	    		  table += '<tr><th>Name</th><th>LastName</th><th>BloodGroup</th><th>MobileNo</th><th>Email</th></tr>';
+	    	  for(i=0;i<array.length;i++){
+			    	table+="<tr>"
+			    		table+="<td>"+array[i].Name+"</td>"
+				 		table+="<td>"+array[i].lName+"</td>"
+				 		table+="<td>"+array[i].bg+"</td>"
+				 		table+="<td>"+array[i].pno+"</td>"
+				 		table+="<td>"+array[i].email+"</td>"
+	    	    	  table+="</tr>";
+			 	}
+	                  table += '</table>';  
+	                  $('.getStat')[0].innerHTML = table;
+		 })
+		 .fail(function(result){
+		 	alert("error");
+		 })
+		  
+	});

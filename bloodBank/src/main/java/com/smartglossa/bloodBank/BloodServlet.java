@@ -99,7 +99,7 @@ public class BloodServlet extends HttpServlet {
 				JSONObject obj=new JSONObject();
 				obj.put("status", 0);
 				e.printStackTrace();
-				// TODO: handle exception
+				
 			}
 			response.getWriter().print(user);
 		} else if (op.equals("getonly")) {
