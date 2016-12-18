@@ -96,18 +96,19 @@ public class Blood {
 
 	public JSONArray getOne(String bgroup) throws Exception {
 		try {
-			JSONArray gets = new JSONArray();
-			String query = "select * from user where bgroup='" + bgroup + "'";
+			JSONArray getss = new JSONArray();
+			String query = "select * from orders where bgroup='" + bgroup + "'";
 			rs = stat.executeQuery(query);
 			while (rs.next()) {
-				JSONObject oder=new JSONObject();
-				oder.put("userName", rs.getString(1));
-				oder.put("fName", rs.getString(3));
-				oder.put("lName", rs.getString(4));
+				JSONObject oder = new JSONObject();
+				oder.put("Name", rs.getString(2));
+				oder.put("lName", rs.getString(3));
+				oder.put("bg", rs.getString(4));
 				oder.put("pno", rs.getString(5));
 				oder.put("email", rs.getString(6));
+				getss.put(oder);
 			}
-			return gets;
+			return getss;
 		} finally {
 			closeConnection();
 		}
@@ -130,12 +131,13 @@ public class Blood {
 		}
 
 	}
+
 	public JSONArray retunsons(String bgroup) {
-		JSONArray ss=new JSONArray();
+		JSONArray ss = new JSONArray();
 		try {
-			
+
 			Statement stat = con.createStatement();
-			String query = "select * from orders where bgroup="+bgroup+"" ;
+			String query = "select * from orders where bgroup=" + bgroup + "";
 			ResultSet rs = stat.executeQuery(query);
 			while (rs.next()) {
 				JSONObject one = new JSONObject();
