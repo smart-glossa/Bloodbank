@@ -40,15 +40,14 @@ public class BloodServlet extends HttpServlet {
 			response.getWriter().print(updte);
 		} else if (op.equals("userAdd")) {
 			String uname = request.getParameter("uName");
-			String pass = request.getParameter("pass");
-			String fname = request.getParameter("fName");
-			String lname = request.getParameter("lName");
-			String pno = request.getParameter("pNo");
-			String email = request.getParameter("emailId");
+			String lname = request.getParameter("lname");
+			String bgroup = request.getParameter("bgroup");
+			int mno = Integer.parseInt( request.getParameter("mno"));
+			String email = request.getParameter("email");
 			JSONObject obj1 = new JSONObject();
 			try {
 				Blood user = new Blood();
-				user.addUser(uname, pass, fname, lname, pno, email);
+				user.addUser(uname, lname, bgroup, mno, email);
 				obj1.put("status", 1);
 			} catch (Exception e) {
 				obj1.put("status", 0);

@@ -30,11 +30,10 @@ public class Blood {
 		}
 	}
 
-	public void addUser(String uname, String fname, String lname, String bgroup, String pno, String email)
-			throws Exception {
+	public void addUser(String uname, String lname, String bgroup, int mno, String email) throws Exception {
 		try {
-			String query = "insert into user(userName,password,firstName,lastName,bgroup,phoneNumber,emailId)values('"
-					+ uname + "','" + bgroup + "','" + fname + "','" + lname + "','" + pno + "','" + email + "')";
+			String query = "insert into orders(uname,lname,bgroup,mno,email)values('" + uname + "','" + lname + "','"
+					+ bgroup + "'," + mno + ",'" + email + "')";
 			stat.execute(query);
 		} finally {
 			closeConnection();
@@ -60,7 +59,7 @@ public class Blood {
 			if (rs.next()) {
 				if (uname != "") {
 					log.put("username", rs.getString(1));
-					log.put("status",1);
+					log.put("status", 1);
 				}
 			} else {
 				log.put("status", "error");
@@ -70,7 +69,7 @@ public class Blood {
 		} finally {
 			closeConnection();
 		}
-		
+
 	}
 
 	public JSONArray userAll() throws Exception {
