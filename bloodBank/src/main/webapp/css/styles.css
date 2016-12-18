@@ -1,0 +1,70 @@
+@CHARSET "ISO-8859-1";
+.logins{
+position:absolute;
+top:200px; 
+margin-left:480px; 
+}
+.ll {
+	background-color:LightSlateGray;                   
+	width:870px;
+	padding-left:40px;
+	position:absolute;
+	top:190px;
+	left:250px;
+	z-index: 2;
+}
+.lls {
+	background-color:DarkSlateGray;                   
+	width:1000px;
+	padding-left:20px;
+	position:absolute;
+	top:20px;
+	left:100px;
+	z-index: 2;
+}
+.h {
+	top: 8px;
+	left: 860px;
+	position: absolute;
+}
+.hh{
+	top: 12px;
+	left:1300px;
+	position: absolute;
+	
+}
+.hs{
+	top: 12px;
+	left:960px;
+	position: absolute;
+}
+.fons{
+	color:#FFFFFF;
+	font-size:30px; 
+	font-family: cursive;   
+}
+.dom{
+	top:250px;
+	left:350px;
+	position: absolute;
+}
+.student{
+	position:absolute;
+	left:350px;
+	top:200px;  
+}
+.books{
+	position:absolute;
+	left:350px;
+	top:200px;
+}
+.getAllbook{
+	position:absolute;
+	left:350px;
+	top:200px;
+}
+.tabs{
+	border-spacing:30px;
+    font-size:24px;
+    color:#FFFFFF;  
+}

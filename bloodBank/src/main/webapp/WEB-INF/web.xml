@@ -6,11 +6,11 @@
     	</description>
     	<display-name>BloodServlet</display-name>
     	<servlet-name>BloodServlet</servlet-name>
-    	<servlet-class>com.smartglossa.BloodBank.BloodServlet</servlet-class>
+    	<servlet-class>com.smartglossa.bloodBank.BloodServlet</servlet-class>
     </servlet>
     <servlet-mapping>
     	<servlet-name>BloodServlet</servlet-name>
-    	<url-pattern>/BloodServlet</url-pattern>
+    	<url-pattern>/blood </url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

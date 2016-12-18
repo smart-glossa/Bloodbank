@@ -15,13 +15,13 @@ $(document).ready(function() {
 			}
            if(cpass===""){
         	   alert("Please Enter ConformPassword");
-        	   $("#cpass").focus().css("outline-color","#ff0000");
+        	   $("#cpassword").focus().css("outline-color","#ff0000");
         	   return;
            }
            if(cpass !== pass){
    
         	   $("#divCheckPasswordMatch").html("Passwords do not match!").show().fadeOut(3000);
-        	   $("#cpass").focus().css("outline-color","red");
+        	   $("#cpassword").focus().css("outline-color","red");
         	   return;
            }else{
         	   
@@ -37,9 +37,8 @@ $(document).ready(function() {
 			if (result.status == 1) {
 				alert("successfully Added");
 				$('#name').val("");
-				$('#username').val("");
 				$('#password').val("");
-				$('#cpass').val("");
+				$('#cpassword').val("");
 			} else {
 				result = JSON.parse(result);
 				if (result.status == 0) {
@@ -56,40 +55,30 @@ $(document).ready(function() {
 	        var td = $(this).parent();
 	        var tr = td.parent();
 	        if (key.which == 13) {
-	            tr.next().children().children("#username").focus();
+	            tr.next().children().children("#password").focus();
 	        }
 	    })
-	     $(document).on("keyup","#username",function(key){
+	     $(document).on("keyup","#password",function(key){
 	        var td = $(this).parent();
 	        var tr = td.parent();
 	        if (key.which == 13) {
-	            tr.next().children().children("#password").focus();
+	            tr.next().children().children("#cpassword").focus();
 	        }
 	        if(key.which == 38){
 	            tr.prev().children().children("#name").focus();
 	        }
 	    })
-	    $(document).on("keyup","#password",function(key){
-	        var td = $(this).parent();
-	        var tr = td.parent();
-	        if (key.which == 13) {
-	            tr.next().children().children("#cpass").focus();
-	        }
-	        if (key.which==38) {
-	            tr.prev().children().children("#username").focus();
-	        }
-	    })
-	    $(document).on("keyup","#cpass",function(key){
+	    $(document).on("keyup","#cpassword",function(key){
 	        var td = $(this).parent();
 	        var tr = td.parent();
 	        if (key.which == 13) {
 	            tr.next().children().children("#signin").focus();
 	        }
-	        if(key.which == 38){
+	        if (key.which==38) {
 	            tr.prev().children().children("#password").focus();
 	        }
 	    })
-	    $('#submit').keypress(function(event){
+	    $('#signin').keypress(function(event){
 	    var keycode = (event.keyCode ? event.keyCode : event.which);
 	    if(keycode == '13'){
 	      //  alert('You pressed a "enter" key in textbox');  
