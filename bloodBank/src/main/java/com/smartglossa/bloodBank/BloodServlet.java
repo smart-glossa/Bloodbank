@@ -10,6 +10,8 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 
+
+
 public class BloodServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
@@ -113,7 +115,31 @@ public class BloodServlet extends HttpServlet {
 				e.printStackTrace();
 			}
 			response.getWriter().println(gets);
+		}else if(op.equals("emails")){
+			String unames=request.getParameter("names");
+			{
+				JSONObject res1 = new JSONObject();
+				try {
+					Blood lib3 = new Blood();
+					res1 = lib3.getone(unames);
+				} catch (Exception e) {
+					res1.put("status", 0);
+					e.printStackTrace();
+				}
+				response.getWriter().print(res1);
+			}
+			}else if(op.equals("send")){
+				String to = request.getParameter("to");
+		        String message =  request.getParameter("message");
+		        JSONObject sent=new JSONObject();
+		        try {
+					Email snd=new Email();
+					snd.send(to, message);
+				} catch (Exception e) {
+					// TODO: handle exception
+				}
+		        
+		       System.out.println("Mail send successfully");
+		    }   
 		}
 	}
-
-}
