@@ -55,15 +55,22 @@ public class Blood {
 	public JSONObject login(String uname, String pass) throws Exception {
 		try {
 			JSONObject log = new JSONObject();
-			String query = "Select userName from User where userName='" + uname + "' AND password='" + pass + "'";
+			String query = "Select uname from reg where uname='" + uname + "' AND pass='" + pass + "'";
 			rs = stat.executeQuery(query);
 			if (rs.next()) {
-				log.put("UserName", rs.getString(1));
+				if (uname != "") {
+					log.put("username", rs.getString(1));
+					log.put("status",1);
+				}
+			} else {
+				log.put("status", "error");
+
 			}
 			return log;
 		} finally {
 			closeConnection();
 		}
+		
 	}
 
 	public JSONArray userAll() throws Exception {

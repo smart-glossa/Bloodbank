@@ -85,33 +85,30 @@ $(document).ready(function() {
 	      //  alert('You pressed a "enter" key in textbox');  
 	    }
 	});
-$(document).on(
-		"click",
-		"#login",
-		function(key) {
-			var user = $('#user').val();
-			var pass = $('#pass').val();
+$(document).on("click","#login",function(key) {
+			var names = $('#Names').val();
+			var pass = $('#pwd').val();
 
-			if (user == "") {
+			if (names == "") {
 				alert("Please Enter username ");
-				$("#user").focus().css("outline-color", "#ff0000");
+				$("#Names").focus().css("outline-color", "#ff0000");
 			}
 			if (pass == "") {
 				alert("Please Enter password");
-				$("#pass").focus().css("outline-color", "ff0000");
+				$("#pwd").focus().css("outline-color", "ff0000");
 				return;
-			}  //http://localhost:8080/arun/bill?operation=login&username=kumar&password=737
-			var url = "/arun/bill?operation=login&user="
-					+ user + "&pass=" + pass;
+			}
+			var url = "/bloodBank/blood?operation=login&Names="
+					+ names + "&pass=" + pass;
 			$.ajax({
 				url : url,
 				type : 'POST'
 			}).done(function(result) {
 				var resp = JSON.parse(result);
-				if (resp.status == "success") {
-					//alert("successlly login"+user);
-					document.cookie = "user=" + user;
-					window.location.href="index.html";
+				if (resp.status == 1) {
+					document.cookie = "user=" + names;
+					window.location.href="blood.html";
+					
 			
 				} else {
 					//result = JSON.parse(result);
