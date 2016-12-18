@@ -28,7 +28,8 @@ $(document).ready(function() {
         	   $("#divCheckPasswordMatch").html("Passwords match.").show().fadeOut(3000);
            }
         	   //added user detail
-		var url ="/arun/bill?operation=adduser&name=" +name+ "&username=" +username+ "&password="+pass; 
+           //http://localhost:8080/bloodBank/blood?operation=reg&Name=sathish&password=1000
+		var url ="/bloodBank/blood?operation=reg&Name=" +name+ "&password="+pass; 
 			$.ajax({
 			url : url,
 			type : 'POST'
